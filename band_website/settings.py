@@ -25,7 +25,14 @@ SECRET_KEY = 'django-insecure-^mkfi=i0-s92ekh=tf*m8#i8yebnpy$m^2ie=do(1aghqibxb*
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+# band_website/settings.py
+
+ALLOWED_HOSTS = [
+    'thelateboomersband.com', 
+    'www.thelateboomersband.com', 
+    '127.0.0.1', 
+    'localhost'
+]
 
 
 # Application definition
