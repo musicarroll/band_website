@@ -20,8 +20,6 @@ static/html/
 static/admin/
 static/css/
 static/images/
-band/static/
-band/static/
 .json
 start.log
 backup.iso

@@ -1,0 +1,278 @@
+/* Reset some default styles */
+body, h1, h2, h3, h4, h5, h6, p, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #fafafa;
+  color: #333333;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.form-container {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 50px auto;
+  max-width: 400px;
+  padding: 20px;
+  text-align: left;
+}
+
+.registration-form fieldset {
+  border: none;
+  padding: 0;
+}
+
+.registration-form legend {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.registration-form label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.registration-form input {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 1em;
+  margin-bottom: 5px;
+  padding: 10px;
+  width: 100%;
+}
+
+.registration-form .helptext ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 5px 0 15px 0;
+}
+
+.form-actions {
+  text-align: center;
+}
+
+.btn-submit {
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+  font-size: 1em;
+  padding: 10px 20px;
+  text-align: center;
+}
+
+.btn-submit:hover {
+  background-color: #45a049;
+}
+
+.signin-link {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.signin-link a {
+  color: #007BFF;
+  text-decoration: none;
+}
+
+.signin-link a:hover {
+  text-decoration: underline;
+}
+
+
+
+
+
+
+
+.header {
+  background-color: #0969faed;
+  color: white;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+  flex-wrap: wrap;
+}
+
+.navbar-list {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+}
+
+.navbar-item {
+  margin: 0 10px;
+}
+
+.navbar-link {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px; /* Reduced padding */
+  flex-wrap: wrap; /* Ensure elements wrap on smaller screens */
+}
+
+.header-table {
+  width: 100%;
+  border-spacing: 0 10px; /* Add some spacing between rows */
+}
+
+.header-cell {
+  vertical-align: middle;
+  padding: 0 10px;
+}
+
+.logo-cell {
+  width: 15%;
+}
+
+.logo {
+  width: 100%;
+  height: auto;
+  max-width: 150px; /* Ensure the logo doesn't get too large */
+}
+
+.header-text-cell {
+  text-align: center;
+}
+
+.user-info-cell {
+  text-align: right;
+}
+
+.highlight {
+  color: red;
+}
+
+.highlight.small {
+  font-size: small;
+}
+
+.user-info {
+  text-align: right;
+  margin-left: auto; /* Ensure it aligns to the right */
+}
+
+.user-details {
+  background-color: #f4f4f4;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.user-details a {
+  color: blue; /* Standard link color */
+  text-decoration: underline;
+}
+
+.main-content {
+  display: flex;
+  justify-content: center; /* Center the content horizontally */
+  align-items: center; /* Center the content vertically if needed */
+  flex: 1;
+  padding: 20px;
+}
+
+.content {
+  width: 100%;
+  max-width: 800px; /* Set a max width for better readability */
+}
+
+.footer {
+  background-color: #0969faed;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+/* Responsive table */
+.wwstdtable {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%; /* Make the table width 100% */
+}
+
+.wwstdtable tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.wwstdtable tr:hover {
+  background-color: #ddd;
+}
+
+.wwstdtable th, .wwstdtable td {
+  padding: 1em; /* Use em units for padding */
+  text-align: center;
+}
+
+.wwstdtable th {
+  background-color: #0969faed;
+  color: white;
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .header-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .main-content {
+    flex-direction: column;
+  }
+
+  .content-left {
+    padding-right: 0;
+  }
+
+  .header-table {
+    width: 100%;
+    border-spacing: 0 5px;
+  }
+
+  .header-cell {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+
+  .logo-cell {
+    width: 40%;
+  }
+
+  .logo {
+    max-width: 100px;
+  }
+
+  .user-info-cell {
+    text-align: center;
+  }
+}
