@@ -7,7 +7,7 @@
     {% block content %}
     <h1>{{ musician.name }}</h1>
     <p><strong>Instrument:</strong> {{ musician.instrument }}</p>
-    <p>{{ musician.bio }}</p>
+    <p>{{ musician.bio|safe }}</p>
     {% if musician.photo %}
         <img src="{{ musician.photo.url }}" alt="{{ musician.name }}">
     {% endif %}
