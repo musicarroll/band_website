@@ -1,14 +1,15 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Contact Us</title>
-</head>
-<body>
+{% extends "band/base.html" %}
+{% load static %}
+{% block title %}
+{{ musician.name }}
+{% endblock%} 
+<div class="container">
+    {% block content %}
     <h1>Get in Touch</h1>
     <form method="post">
         {% csrf_token %}
         {{ form.as_p }}
         <button type="submit">Send</button>
     </form>
-</body>
-</html>
+    {% endblock %}
+</div>

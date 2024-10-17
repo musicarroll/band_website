@@ -1,14 +1,15 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>{{ musician.name }}'s Bio</title>
-</head>
-<body>
+{% extends "band/base.html" %}
+{% load static %}
+{% block title %}
+{{ musician.name }}
+{% endblock%} 
+<div class="container">
+    {% block content %}
     <h1>{{ musician.name }}</h1>
     <p><strong>Instrument:</strong> {{ musician.instrument }}</p>
     <p>{{ musician.bio }}</p>
     {% if musician.photo %}
         <img src="{{ musician.photo.url }}" alt="{{ musician.name }}">
     {% endif %}
-</body>
-</html>
+    {% endblock %}
+</div>

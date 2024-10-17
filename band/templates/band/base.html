@@ -1,0 +1,81 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Enjoy the Music of the Late Boomers Band.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+
+  <title>{% block title %}The Late Boomers Band{% endblock %}</title>
+  {% block extra %}
+  <style>
+    ul {
+        margin-left: 20px; /* Adjust the value as needed */
+    }
+</style>
+
+  {% endblock %}
+</head>
+
+<body>
+  <header class="header">
+    {% now "Y-m-d" as todays_date %}
+    <nav class="navbar">
+      <ul class="navbar-list">
+        <li class="navbar-item"><a class="navbar-link" href="{% url 'landing_page' %}">Home</a></li>
+        <li class="navbar-item"><a class="navbar-link" href="{% url 'about_page' %}">About Us</a></li>
+        <li class="navbar-item"><a class="navbar-link" href="{% url 'music_page' %}">Music</a></li>
+        <li class="navbar-item"><a class="navbar-link" href="{% url 'calendar_page' %}">Calendar</a></li>
+        <li class="navbar-item"><a class="navbar-link" href="{% url 'contact_page' %}">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="header-content">
+    <table class="header-table">
+      <tr>
+        <td class="header-cell logo-cell">
+          <a href="{% url 'landing_page' %}">
+            <img class="logo" src="{% static 'images/tlbblogo.png'%}" 
+              alt="TLBB Logo">
+          </a>
+        </td>
+        <td class="header-cell header-text-cell">
+          <h1><a href="{% url 'landing_page' %}">The Late Boomers Band</a></h1>
+        </td>
+        <td class="header-cell user-info-cell">
+          {% if messages %}
+            {% for message in messages %}
+              <h3 class="{{ message.tags }}" style="color:red;"><strong>{{ message }}</strong></h3>
+            {% endfor %}
+          {% endif %}
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <main class="main-content">
+    <div class="content">
+      {% block content %}{% endblock %}
+    </div>
+  </main>
+  <!-- Footer and other content -->
+  <footer class="footer">
+    <nav class="navbar">
+      <ul class="navbar-list">
+        <li class="navbar-item"><a class="navbar-link" href="{% url 'landing_page' %}">Home</a></li>
+        <li class="navbar-item"><a class="navbar-link" href="{% url 'about_page' %}">About Us</a></li>
+        <li class="navbar-item"><a class="navbar-link" href="{% url 'music_page' %}">Music</a></li>
+        <li class="navbar-item"><a class="navbar-link" href="{% url 'calendar_page' %}">Calendar</a></li>
+        <li class="navbar-item"><a class="navbar-link" href="{% url 'contact_page' %}">Contact Us</a></li>
+      </ul>
+    </nav>
+  </footer>
+
+{% block extra_body %}
+ 
+{% endblock %}
+
+</body>
+</html>

@@ -1,4 +1,5 @@
 __pycache__/
+*.zip
 *.old
 *.pyc
 *.pyo
@@ -12,10 +13,15 @@ db.sqlite3.backup
 .env
 .dot
 .svg
-wwstatic/
+staticfiles/
 static/temp_dirs/
 static/js/
 static/html/
+static/admin/
+static/css/
+static/images/
+band/static/
+band/static/
 .json
 start.log
 backup.iso

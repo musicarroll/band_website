@@ -1,14 +1,18 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Oldies Rock Band</title>
-</head>
-<body>
-    <h1>Welcome to Our Band's Website!</h1>
+
+{% extends "band/base.html" %}
+{% load static %}
+{% block title %}
+Oldies Rock Band
+{% endblock%} 
+<div class="container">
+    {% block content %}
+    <center>
+       <h1>Welcome to Our Band's Website!</h1>
     <p>Enjoy the classic rock experience.</p>
     <a href="{% url 'about_page' %}">About Us</a> | 
     <a href="{% url 'music_page' %}">Music</a> | 
     <a href="{% url 'calendar_page' %}">Calendar</a> | 
     <a href="{% url 'contact_page' %}">Contact</a>
-</body>
-</html>
+    {% endblock %}
+    </center>
+</div>

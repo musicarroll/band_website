@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -23,7 +24,7 @@ print(BASE_DIR)
 SECRET_KEY = 'django-insecure-^mkfi=i0-s92ekh=tf*m8#i8yebnpy$m^2ie=do(1aghqibxb*'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 # band_website/settings.py
 
@@ -132,7 +133,12 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
 
 STATIC_URL = '/static/'
-STATIC_ROOT = BASE_DIR / 'static'
+STATIC_ROOT = BASE_DIR / 'staticfiles'
+
+# Additional directories to look for static files
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'band', 'static'),
+]
 
 
 # Default primary key field type
