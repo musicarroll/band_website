@@ -7,15 +7,15 @@
     {% block content %}
     <center>
         <h1>Upcoming Events</h1>
-    <ul>
-        {% for event in events %}
-            <li>
-                <h2>{{ event.name }}</h2>
-                <p>{{ event.date }} - {{ event.location }}</p>
-                <p>{{ event.description }}</p>
-            </li>
+        <table class="wwstdtable">
+            {% for event in events %}
+            <tr>
+                <td><h2>{{ event.name }}</h2>
+                <td><p>{{ event.date }} - {{ event.location }}</p></td>
+                <td><p>{{ event.description }}</p></td>
+                </tr>
         {% endfor %}
-    </ul>
+    </table>
 </center>
         {% endblock %}
 </div>
