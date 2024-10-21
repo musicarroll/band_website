@@ -7,17 +7,18 @@ Our Music
     {% block content %}
     <center>
     <h1>Our Recordings</h1>
-    <ul>
+    <table class="wwstdtable">
         {% for clip in audio_clips %}
-            <li>
-                <h2>{{ clip.title }}</h2>
-                <p>{{ clip.description }}</p>
-                <audio controls>
+            <tr>
+                <td><h2>{{ clip.title }}</h2></td>
+                <td><p>{{ clip.description }}</p></td>
+                <td><audio controls>
                     <source src="{{ clip.audio_file.url }}" type="audio/mpeg">
                 </audio>
-            </li>
+            </td>
+            </tr>
         {% endfor %}
-    </ul>
-</center>
+    </table>
+    </center>
     {% endblock %}
 </div>
