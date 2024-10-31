@@ -8,7 +8,8 @@ def landing_page(request):
     return render(request, 'band/landing.html')
 
 def about_page(request):
-    return render(request, 'band/about.html')
+    musicians = Musician.objects.all()  # Retrieve all musicians
+    return render(request, 'band/about.html', {'musicians': musicians})
 
 def music_page(request):
     audio_clips = AudioClip.objects.all()

@@ -15,14 +15,11 @@ About the Late Boomers Oldies Rock Band
     to us via the Contact link below.</p>
     Musicians: 
 </center>
-    <ul>
-    <li><a href="{% url 'bio_page' 2 %}">Michael Padilla, Sr</a></li>
-    <li><a href="{% url 'bio_page' 3 %}">Michael Larrow</a></li>
-    <li><a href="{% url 'bio_page' 4 %}">Richard Hill</a></li>
-    <li><a href="{% url 'bio_page' 5 %}">Daniel Boehme</a></li>
-    <li><a href="{% url 'bio_page' 6 %}">Jimmy Valderra</a></li>
-    <li><a href="{% url 'bio_page' 1 %}">Michael L. Carroll</a></li>
-    </ul>
-
-    {% endblock %}
+<ul>
+    {% for musician in musicians %}
+        <li><a href="{% url 'bio_page' musician.id %}">{{ musician.name }}</a></li>
+    {% endfor %}
+</ul>
 </div>
+    {% endblock %}
+
