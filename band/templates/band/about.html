@@ -14,12 +14,17 @@ About the Late Boomers Oldies Rock Band
         The Late Boomers Band is the band for your celebration.  Please reach out 
     to us via the Contact link below.</p>
     Musicians: 
-</center>
-<ul>
+
+<table class="wwstdtable" style="width:400px">
+    <tr><th>Name</th><th>Instrument(s)</th></tr>
     {% for musician in musicians %}
-        <li><a href="{% url 'bio_page' musician.id %}">{{ musician.name }}</a></li>
+        <tr>
+            <td><a href="{% url 'bio_page' musician.id %}">{{ musician.name }}</a></td>
+            <td>{{ musician.instrument }}</td>
+        </tr>
     {% endfor %}
-</ul>
+</table>
+</center>
 </div>
     {% endblock %}
 
